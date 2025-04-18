@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="./style.css"/>
+  </head>
+  <body>
+    <div class="container">
+        <header>
+            <nav>
+              <div class="title"><h1>AnuragBaruah.</h1></div>
+              <div class="socialmediaicons" >
+                  <a href="https://discord.com/channels/772386488443994153/772390370935570455" target="_blank"><img src="./img/icons8-discord.svg" id="discord" width="30px" alt="home" /></a>
+                  <a href="https://store.epicgames.com/en-US/u/c6bef052e0334453bedde3552f19c7ab" target="_blank"><img
+                      src="./img/icons8-epic-games.svg" id="epicgames" width="30px"
+                      alt="home"/></a>
+                      <a href="https://github.com/AnuragBaruah47" target="_blank">
+                          <img src="./img/icons8-github.svg" width="30px" id="github" alt="home" />
+                      </a>
+                      <a href="https://www.instagram.com/anurag_baruah_0/" target="_blank">
+                          <img
+                          src="./img/icons8-instagram.svg"
+                          id="instagram" width="30px"
+                          alt="home"
+                        />
+                      </a>
+                      <a href="https://x.com/WhiKinG200" target="_blank">
+                          <img
+                          src="./img/icons8-twitter.svg" id="twitter"
+                          width="30px"
+                          alt="home"
+                        />
+                      </a>
+                      <a href="https://steamcommunity.com/profiles/76561199105399969/" target="_blank">
+                          <img src="./img/icons8-steam.svg" id="steam" width="30px" alt="home"/>
+                      </a>
+                    </div>
+              <div class="hamburger">
+                  <img src="./img/hamburger.svg" alt="">
+              </div>
+            </nav>
+          </header>
+          <main>
+            <div class="herosec">
+              <img src="./img/herosec.jpeg" width="1400px" height="700px" alt="home">
+              <div class="text">
+                <h1>AnuragBaruah</h1>
+                <h2>2nd Year CSE</h2>
+              </div>
+            </div>
+            <div class="slidebar">
+                <img src="./img/clove.svg" id="close" width="35px" alt="home">
+                <ul>
+                    <li>HOME</li>
+                    <li>EDUCATION</li>
+                    <li>HOBBIES</li>
+                    <li>PROJECTS</li>
+                    <li>FAQs</li>
+                    <li>CONTACT</li>
+                </ul>
+            </div>
+          </main>
+    </div>
+  </body>
+</html>
+
+<script>
+    document.querySelector(".hamburger").addEventListener("click",()=>{
+        document.querySelector(".slidebar").style.left=`78%`
+    })
+    document.querySelector("#close").addEventListener("click",()=>{
+        document.querySelector(".slidebar").style.left=`-100%`
+    })
+</script>

@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+*,*::after,*::before{
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: "Geist", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+    background: #1f1f24;
+    overflow-x: hidden;
+}
+.container{
+    height: 100vh;
+    width: 100vw;
+}
+nav{
+    position: relative;
+    display: flex;
+    gap: 70px;
+    height: 6vh;
+    width: 100vw;
+}
+nav>.title>h1{
+    color: #d7a248;
+    margin-left: 10px;
+    margin-top: 10px;
+    font-size: 1.8rem;
+}
+
+.socialmediaicons{
+    margin-top: 15px;
+    display: flex;
+    gap: 5px;
+}
+.hamburger{
+    cursor: pointer;
+   position: absolute;
+   right: 50px;
+   margin: 10px 0px 0px 0px;
+}
+.slidebar{
+    position: absolute;
+    top: 0px;
+    left: -100%;
+    width: 422px;
+    height: 100vh;
+    background: #c30000;
+    transition: left 0.000010s ease-in cubic-bezier(1, 0, 0, 1.01);
+}
+.slidebar>img{
+    cursor: pointer;
+    top: 18px;
+    left: 38px;
+    position: absolute;
+}
+.slidebar>ul{
+    position: absolute;
+    list-style: none;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    top: 110px;
+    left: 45px;
+    font-size: 1.4rem;
+}
+.slidebar>ul>li{
+    cursor: pointer;
+}
+
+.herosec{
+    position: relative;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.herosec>img{
+    position: relative;
+    border-radius: 30px;
+    top: 120px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    animation: animateimgherosec 2s 1;
+}
+.herosec>.text{
+    overflow: hidden;
+    white-space: nowrap;
+    position: absolute;
+    color: #ffffff;
+    top: 300px;
+    left: 50%;
+    width: 600px;
+    border-right: 2px solid white;
+    font-size: 2.5rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    animation: textopa 5s 1;
+}
+@keyframes animateimgherosec {
+    0%{
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+    }
+    100%{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+@keyframes textopa {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 100%;
+    }
+}
