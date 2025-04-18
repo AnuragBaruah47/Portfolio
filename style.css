@@ -11,13 +11,14 @@ body{
     font-size: 16px;
     background: #1f1f24;
     overflow-x: hidden;
+    overflow-y: auto;
 }
 .container{
     height: 100vh;
     width: 100vw;
 }
 nav{
-    position: relative;
+    overflow: auto;
     display: flex;
     gap: 70px;
     height: 6vh;
@@ -31,9 +32,10 @@ nav>.title>h1{
 }
 
 .socialmediaicons{
+    cursor: pointer;
     margin-top: 15px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
 }
 .hamburger{
     cursor: pointer;
@@ -44,11 +46,13 @@ nav>.title>h1{
 .slidebar{
     position: absolute;
     top: 0px;
-    left: -100%;
+   right: -100%;
     width: 422px;
     height: 100vh;
-    background: #c30000;
-    transition: left 0.000010s ease-in cubic-bezier(1, 0, 0, 1.01);
+    background: #1f1f24;
+    border: 2px solid black;
+    transition: right 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+    z-index: 10;
 }
 .slidebar>img{
     cursor: pointer;
@@ -83,6 +87,7 @@ nav>.title>h1{
     position: relative;
     border-radius: 30px;
     top: 120px;
+    z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     animation: animateimgherosec 2s 1;
 }
@@ -99,6 +104,149 @@ nav>.title>h1{
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     animation: textopa 5s 1;
 }
+.three{
+    height: 300px;
+    width: 100vw;
+    display: flex;
+    position: absolute;
+    bottom: -450px;
+    justify-content: center;
+    gap: 30px;
+}
+.three>div{
+    height: 400px;
+    width: 24vw;
+    border-radius: 25px;
+    color: 	#FFFDD0;
+}
+.education{
+    background-color: #4e4e4e;
+    display: flex;
+    justify-content: center;
+}
+.aboutme{
+    background-color: #706e6e;
+    display: flex;
+    justify-content: center;
+}
+.interest{
+    background-color:#7a7878;
+    display: flex;
+    justify-content: center;
+}
+.projectsection{
+    position: relative;
+    bottom: -800px;
+    width: 100vw;
+    height: 900px;
+    margin-bottom: 20px;
+}
+.projectsection>.title{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 60px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.projectsection>.card{
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.projectsection>.card>div{
+    height: 500px;
+    width: 23.3vw;
+    border-radius: 20px;
+}
+
+
+.contact{
+    position: relative;
+    bottom: -1200px;
+    width: 100vw;
+    height: 650px;
+    margin-bottom: 20px;
+    background-color: #7676b8;
+}
+
+.contact>.title{
+    width: 100vw;
+    display: flex;
+    position: relative;
+    top: 250px;
+    left: 150px;
+    font-size: 2.5rem;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.forms{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    right: 300px;
+    align-items: flex-end;
+    width: 100vw;
+    gap: 20px;
+}
+.forms>input{
+    height: 50px;
+    width: 40vw;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    font-family:inherit;
+}
+.forms>:nth-child(4){
+    height: 200px;
+    resize: none;
+    overflow-y: auto;
+    border-radius: 10px;
+    width: 40vw;
+    font-size: 1.2rem;
+    font-family:inherit;
+}
+.forms>button{
+    height: 50px;
+    width: 40vw;
+    border: none;
+    border-radius: 10px;
+}
+footer{
+    position: relative;
+    height: 300px;
+    width: 100vw;
+    bottom: -1185px;
+    background-color: #000000;
+}
+footer>:first-child{
+    top: 80px;
+    left: 80px;
+    color: white;
+    position: absolute;
+}
+footer>:nth-child(3){
+    top: 120px;
+    right:410px;
+    color: white;
+    position: absolute;
+}
+footer>p{
+    right: 200px;
+   top: 80px;
+    color: white;
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+
+
 @keyframes animateimgherosec {
     0%{
         clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);

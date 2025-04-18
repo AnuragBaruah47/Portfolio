@@ -61,16 +61,52 @@
                     <li>CONTACT</li>
                 </ul>
             </div>
+            <div class="three">
+              <div class="education"><h1>Education</h1></div>
+              <div class="aboutme"><h1>About Me</h1></div>
+              <div class="interest"><h1>Interests</h1></div>
+            </div>
+            <div class="projectsection">
+              <div class="title"><h1>My Projects</h1></div>
+              <div class="card">
+                <div class="card1"><img src="./img/Screenshot 2025-04-18 230456.png" height="500px" width="440px" alt=""></div>
+                <div class="card2"><img src="./img/Screenshot 2025-04-18 231217.png" height="500px" width="440px" alt=""></div>
+                <div class="card3"><img src="./img/Screenshot 2025-04-18 231251.png" height="500px" width="440px" alt=""></div>
+                <div class="card4"><img src="./img/Screenshot 2025-04-18 231317.png" height="500px" width="440px" alt=""></div>
+                <div class="card5"><img src="./img/Screenshot 2025-04-18 231349.png" height="500px" width="440px" alt=""></div>
+                <div class="card6"><img src="./img/Screenshot 2025-04-18 231501.png" height="500px" width="440px" alt=""></div>
+              </div>
+            </div>
+            <div class="contact">
+              <div class="title">
+                <h1>Leave A Message</h1>
+              </div>
+              <div class="forms">
+                <form action=""></form>
+                <input type="text" placeholder="your name">
+                <input type="text" placeholder="your email">
+                <textarea name="message" placeholder="your message" maxlength="300"></textarea>
+                <button type="submit">submit</button>
+              </div>
+            </div>
           </main>
+          <footer>
+            <h1>Made By AnuragBaruah</h1>
+            <p>
+              Just feel free to contact if you wanna collaborate with me, or simply have a conversation.
+              </p>
+              <h1>anuragbaruah2004@gmai.com</h1>
+          </footer>
     </div>
   </body>
 </html>
 
 <script>
     document.querySelector(".hamburger").addEventListener("click",()=>{
-        document.querySelector(".slidebar").style.left=`78%`
+        document.querySelector(".slidebar").style.right=`0%`
     })
     document.querySelector("#close").addEventListener("click",()=>{
-        document.querySelector(".slidebar").style.left=`-100%`
+      document.querySelector(".slidebar").style.transition=`right 8s cubic-bezier(0.075, 0.82, 0.165, 1)`
+        document.querySelector(".slidebar").style.right=`-80%`
     })
 </script>
