@@ -9,7 +9,7 @@ body{
     font-optical-sizing: auto;
     font-style: normal;
     font-size: 16px;
-    background: #1f1f24;
+    background: #ffffff;
     overflow-x: hidden;
     overflow-y: auto;
 }
@@ -18,17 +18,20 @@ body{
     width: 100vw;
 }
 nav{
+    position: fixed;
     overflow: auto;
     display: flex;
     gap: 70px;
     height: 6vh;
     width: 100vw;
+    z-index: 10;
 }
 nav>.title>h1{
-    color: #d7a248;
-    margin-left: 10px;
+    color: #000000;
+    margin-left: 30px;
     margin-top: 10px;
     font-size: 1.8rem;
+    font-family: inherit;
 }
 
 .socialmediaicons{
@@ -42,9 +45,10 @@ nav>.title>h1{
    position: absolute;
    right: 50px;
    margin: 10px 0px 0px 0px;
+   margin-top: 20px;
 }
 .slidebar{
-    position: absolute;
+    position: fixed;
     top: 0px;
    right: -100%;
     width: 422px;
@@ -59,6 +63,7 @@ nav>.title>h1{
     top: 18px;
     left: 38px;
     position: absolute;
+    filter: invert(1);
 }
 .slidebar>ul{
     position: absolute;
@@ -86,7 +91,7 @@ nav>.title>h1{
 .herosec>img{
     position: relative;
     border-radius: 30px;
-    top: 120px;
+    top: 150px;
     z-index: -1;
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     animation: animateimgherosec 2s 1;
@@ -95,11 +100,11 @@ nav>.title>h1{
     overflow: hidden;
     white-space: nowrap;
     position: absolute;
-    color: #ffffff;
+    color: #000000;
     top: 300px;
     left: 50%;
     width: 600px;
-    border-right: 2px solid white;
+    border-right: 5px solid rgb(0, 0, 0);
     font-size: 2.5rem;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     animation: textopa 5s 1;
@@ -161,13 +166,15 @@ nav>.title>h1{
     border-radius: 20px;
 }
 
+.projectsection>.card>div>img{
+    border: 2px solid black;
+}
 
 .contact{
     position: relative;
     bottom: -1200px;
     width: 100vw;
     height: 650px;
-    margin-bottom: 20px;
     background-color: #7676b8;
 }
 
@@ -175,8 +182,8 @@ nav>.title>h1{
     width: 100vw;
     display: flex;
     position: relative;
-    top: 250px;
-    left: 150px;
+    top: 150px;
+    left: 240px;
     font-size: 2.5rem;
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -184,31 +191,35 @@ nav>.title>h1{
     display: flex;
     flex-direction: column;
     position: relative;
-    right: 300px;
+    right: 400px;
     align-items: flex-end;
     width: 100vw;
     gap: 20px;
 }
 .forms>input{
     height: 50px;
-    width: 40vw;
+    width: 30vw;
     border: none;
     border-radius: 10px;
     font-size: 1.2rem;
     font-family:inherit;
+    padding-left: 20px;
+    box-sizing: border-box;
 }
 .forms>:nth-child(4){
     height: 200px;
     resize: none;
     overflow-y: auto;
     border-radius: 10px;
-    width: 40vw;
+    width: 30vw;
     font-size: 1.2rem;
     font-family:inherit;
+    padding: 20px;
+    box-sizing: border-box;
 }
 .forms>button{
     height: 50px;
-    width: 40vw;
+    width: 30vw;
     border: none;
     border-radius: 10px;
 }

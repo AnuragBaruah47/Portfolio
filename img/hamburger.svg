@@ -1,10 +1,10 @@
-<svg width="40" height="30" viewBox="0 0 40 30" xmlns="http://www.w3.org/2000/svg">
+<svg width="40" height="24" viewBox="0 0 40 24" xmlns="http://www.w3.org/2000/svg">
   <!-- Top line -->
-  <rect x="0" y="4" width="30" height="2" rx="1" ry="1" fill="#d7a248" />
-  
-  <!-- Middle line (shorter on the left) -->
-  <rect x="10" y="14" width="20" height="2" rx="1" ry="1" fill="#d7a248" />
-  
+  <line x1="0" y1="2" x2="40" y2="2" stroke="black" stroke-width="4" stroke-linecap="round"/>
+
+  <!-- Middle line (shorter, ends at same x as top and bottom, starts further right) -->
+  <line x1="20" y1="12" x2="40" y2="12" stroke="black" stroke-width="4" stroke-linecap="round"/>
+
   <!-- Bottom line -->
-  <rect x="0" y="24" width="30" height="2" rx="1" ry="1" fill="#d7a248" />
+  <line x1="0" y1="22" x2="40" y2="22" stroke="black" stroke-width="4" stroke-linecap="round"/>
 </svg>
