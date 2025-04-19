@@ -1,282 +1,137 @@
-@import url('https://fonts.googleapis.com/css2?family=Geist:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist:wght@700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Martel+Sans:wght@200;300;400;600;700;800;900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Playwrite+GB+S:ital,wght@0,100..400;1,100..400&family=Playwrite+IT+Moderna:wght@100..400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Tektur:wght@400..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Winky+Rough:ital,wght@0,300..900;1,300..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400..700;1,400..700&display=swap');
+
 *,*::after,*::before{
     margin: 0px;
     padding: 0px;
 }
-html{
-    scroll-behavior: smooth;
-}
 body{
-    font-family: "Geist", sans-serif;
-    font-optical-sizing: auto;
-    font-style: normal;
-    font-size: 16px;
-    background: #ffffff;
-    overflow-x: hidden;
-    overflow-y: auto;
+        font-family: "Geist", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+      font-size: 16px;
+      overflow-x: hidden;
 }
 .container{
     height: 100vh;
     width: 100vw;
-}
-nav{
-    overflow: auto;
     display: flex;
-    gap: 70px;
-    height: 6vh;
-    width: 100vw;
-    z-index: 10;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+    perspective: 1000px;
 }
-nav>.title>h1{
-    color: #000000;
-    margin-left: 30px;
+.container>h1{
+    font-size: 5rem;
+}
+.container>p{
+    font-size: 1.5rem;
+    font-family: "Instrument Sans", sans-serif;
+}
+.container>button{
+    height: 45px;
+    width: 170px;
+    border-radius: 25px;
+    border: none;
+    color: #ffffff;
+    font-size: 1rem;
+    background-color: #1e99ea;
     margin-top: 10px;
-    font-size: 1.8rem;
     font-family: inherit;
+    transition: background-color 500ms ease-in;
+    transition: transform 100ms ease-in;
+ 
 }
 
-.socialmediaicons{
-    cursor: pointer;
-    margin-top: 15px;
+.container>button:hover{
+    background-color: #0377c4;
+    transform: translateZ(50px);
+}
+
+
+
+
+
+.container>img{
+    position: absolute;
+    z-index: -1;
+    bottom: 0px;
+}
+.aboutsec{
     display: flex;
+    position: relative;
+    width: 100%;
+    height: 900px;
+    flex-direction: row;
+    justify-content: center;
+    gap: 50px;
+}
+
+.title{
+    margin-top: 80px;
+    margin-bottom: 60px;
+    display: flex;
+    width: 100vw;
+    justify-content: center;
+    font-family: inherit;
+    font-size: 1.1rem;
+}
+
+.text{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    top: 100px;
+    right: 0px;
+    gap: 20px;
+}
+.card{
+    height: 550px;
+    border-radius: 20px;
+    width: 30vw;
+    background-color: #0377c4;
+}
+.aboutsec>.text>:nth-child(2){
+    height: 300px;
+    width: 31vw;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1.2rem;
+    font-family: inherit;
+    text-align: start;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 300;
+    line-height: 32px;
+}
+.threecard>div{
+    height: 90px;
+    width: 150px;
+    background-color: #F0F7FF;
+    border-radius: 10px;
+}
+.threecard{
+    top: -70px;
+    position: relative;
+    display: flex;
+    gap: 20px;
+}
+.threecard>div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     gap: 10px;
 }
-.hamburger{
-    cursor: pointer;
-   position: fixed;
-   right: 50px;
-   margin: 10px 0px 0px 0px;
-   margin-top: 20px;
-   z-index: 10;
+.threecard>div>h1{
+    color: #0078C3;
+    font-size: 1.5rem;
 }
-.slidebar{
-    position: fixed;
-    top: 0px;
-   right: -100%;
-    width: 422px;
-    height: 100vh;
-    background: #1f1f24;
-    border: 2px solid black;
-    z-index: 10;
-}
-.slidebar>img{
-    cursor: pointer;
-    top: 18px;
-    left: 38px;
-    position: absolute;
-    filter: invert(1);
-}
-.slidebar>ul{
-    position: absolute;
-    list-style: none;
-    color: #ffffff;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    top: 110px;
-    left: 45px;
-    font-size: 1.4rem;
-}
-.slidebar>ul>li{
-    cursor: pointer;
-}
-.slidebar>ul>a{
-    color: #ffffff;
-    text-decoration: none;
-}
-.herosec{
-    position: relative;
-    flex-direction: column;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.herosec>img{
-    position: relative;
-    border-radius: 30px;
-    top: 100px;
-    z-index: -1;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-    animation: animateimgherosec 2s 1;
-}
-.herosec>.text{
-    overflow: hidden;
-    white-space: nowrap;
-    position: absolute;
-    color: #000000;
-    top: 300px;
-    left: 50%;
-    width: 600px;
-    border-right: 5px solid rgb(0, 0, 0);
-    font-size: 2.5rem;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    animation: textopa 5s 1;
-}
-.three{
-    height: 300px;
-    width: 100vw;
-    display: flex;
-    position: absolute;
-    bottom: -450px;
-    justify-content: center;
-    gap: 30px;
-}
-.three>div{
-    height: 400px;
-    width: 24vw;
-    border-radius: 25px;
-    color: 	#FFFDD0;
-}
-.education{
-    background-color: #4e4e4e;
-    display: flex;
-    justify-content: center;
-}
-.aboutme{
-    background-color: #706e6e;
-    display: flex;
-    justify-content: center;
-}
-.interest{
-    background-color:#7a7878;
-    display: flex;
-    justify-content: center;
-}
-.projectsection{
-    position: relative;
-    bottom: -800px;
-    width: 100vw;
-    height: 900px;
-    margin-bottom: 20px;
-}
-.projectsection>.title{
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    font-size: 2.5rem;
-    margin-bottom: 60px;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-.projectsection>.card{
-    display: flex;
-    gap: 50px;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.projectsection>.card>div{
-    height: 500px;
-    width: 23.3vw;
-    border-radius: 20px;
-}
-
-.projectsection>.card>a>div>img{
-    border: 2px solid black;
-    border-radius: 7px;
-}
-
-.contact{
-    position: relative;
-    bottom: -1300px;
-    width: 100vw;
-    height: 650px;
-    background-color: #7676b8;
-}
-
-.contact>.title{
-    width: 100vw;
-    display: flex;
-    position: relative;
-    top: 150px;
-    left: 240px;
-    font-size: 2.5rem;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: #ffffff;
-}
-.forms{
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    right: 400px;
-    align-items: flex-end;
-    width: 100vw;
-    gap: 20px;
-}
-.forms>input{
-    height: 50px;
-    width: 30vw;
-    border: none;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-family:inherit;
-    padding-left: 20px;
-    box-sizing: border-box;
-}
-.forms>:nth-child(4){
-    height: 200px;
-    resize: none;
-    overflow-y: auto;
-    border-radius: 10px;
-    width: 30vw;
-    font-size: 1.2rem;
-    font-family:inherit;
-    padding: 20px;
-    box-sizing: border-box;
-}
-.forms>button{
-    height: 50px;
-    width: 30vw;
-    border: none;
-    border-radius: 10px;
-}
-footer{
-    position: relative;
-    height: 300px;
-    width: 100vw;
-    bottom: -1285px;
-    background-color: #000000;
-}
-footer>:first-child{
-    top: 80px;
-    left: 80px;
-    color: white;
-    position: absolute;
-}
-footer>:nth-child(3){
-    top: 120px;
-    right:410px;
-    color: white;
-    position: absolute;
-}
-footer>p{
-    right: 200px;
-   top: 80px;
-    color: white;
-    position: absolute;
-}
-
-
-
-
-
-
-
-
-
-
-@keyframes animateimgherosec {
-    0%{
-        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
-    }
-    100%{
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
-    }
-}
-@keyframes textopa {
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 100%;
-    }
+.threecard>div>p{
+    font-size: 0.9rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 100;
 }
