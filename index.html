@@ -11,7 +11,7 @@
         <header>
             <nav>
               <div class="title"><h1>AnuragBaruah.</h1></div>
-              <div class="socialmediaicons" >
+              <div class="socialmediaicons">
                   <a href="https://discord.com/channels/772386488443994153/772390370935570455" target="_blank"><img src="./img/icons8-discord.svg" id="discord" width="40px" alt="home" /></a>
                   <a href="https://store.epicgames.com/en-US/u/c6bef052e0334453bedde3552f19c7ab" target="_blank"><img
                       src="./img/icons8-epic-games.svg" id="epicgames" width="40px"
@@ -43,7 +43,7 @@
             </nav>
           </header>
           <main>
-            <div class="herosec">
+            <div class="herosec" id="hero">
               <img src="./img/herosec.png" width="1400px" height="700px" alt="home">
               <div class="text">
                 <h1>AnuragBaruah</h1>
@@ -53,31 +53,30 @@
             <div class="slidebar">
                 <img src="./img/clove.svg" id="close" width="40px" alt="home">
                 <ul>
-                    <li>HOME</li>
-                    <li>EDUCATION</li>
-                    <li>HOBBIES</li>
-                    <li>PROJECTS</li>
-                    <li>FAQs</li>
-                    <li>CONTACT</li>
+                    <a href="#hero"><li>HOME</li></a>
+                    <a href="#about"><li>ABOUT ME</li></a>
+                    <a href="#projects"><li>PROJECTS</li></a>
+                    <a href="#contact"><li>CONTACT</li></a>
+                    <a href="#footer"><li>FOOTER</li></a>
                 </ul>
             </div>
-            <div class="three">
+            <div class="three" id="about">
               <div class="education"><h1>Education</h1></div>
               <div class="aboutme"><h1>About Me</h1></div>
               <div class="interest"><h1>Interests</h1></div>
             </div>
-            <div class="projectsection">
+            <div class="projectsection" id="projects">
               <div class="title"><h1>My Projects</h1></div>
               <div class="card">
-                <div class="card1"><img src="./img/randomjoke.png" height="500px" width="440px" alt=""></div>
-                <div class="card2"><img src="./img/Screenshot 2025-04-18 231217.png" height="500px" width="440px" alt=""></div>
-                <div class="card3"><img src="./img/Screenshot 2025-04-18 231251.png" height="500px" width="440px" alt=""></div>
-                <div class="card4"><img src="./img/Screenshot 2025-04-18 231317.png" height="500px" width="440px" alt=""></div>
-                <div class="card5"><img src="./img/Screenshot 2025-04-18 231349.png" height="500px" width="440px" alt=""></div>
-                <div class="card6"><img src="./img/Screenshot 2025-04-18 231501.png" height="500px" width="440px" alt=""></div>
+                <a href="https://whikingrandomjokegenerator.netlify.app/" target="_blank"><div class="card1"><img src="./img/randomjoke.png" height="500px" width="440px" alt=""></div></a>
+                <a href="https://whikingtictactoe.netlify.app/" target="_blank"><div class="card2"><img src="./img/tictactoe.png" height="500px" width="440px" alt=""></div></a>
+                <a href="https://whikingscalci.netlify.app/" target="_blank"><div class="card3"><img src="./img/calculator.png" height="500px" width="440px" alt=""></div></a>
+                <a href="https://whiking-simonsays.vercel.app/" target="_blank"><div class="card4"><img src="./img/simon says.png" height="300px" width="440px" alt=""></div></a>
+                <a href="https://whiking-sequence-tester.vercel.app/" target="_blank"><div class="card5"><img src="./img/sequencetester.png" height="550px" width="440px" alt=""></div></a>
+                <a href="https://github.com/AnuragBaruah47/SpotifyClone" target="_blank"><div class="card6"><img src="./img/musicplayer.png" height="300px" width="440px" alt=""></div></a>
               </div>
             </div>
-            <div class="contact">
+            <div class="contact" id="contact">
               <div class="title">
                 <h1>Leave A Message</h1>
               </div>
@@ -90,7 +89,7 @@
               </div>
             </div>
           </main>
-          <footer>
+          <footer id="footer">
             <h1>Made By AnuragBaruah</h1>
             <p>
               Just feel free to contact if you wanna collaborate with me, or simply have a conversation.
@@ -103,10 +102,11 @@
 
 <script>
     document.querySelector(".hamburger").addEventListener("click",()=>{
-        document.querySelector(".slidebar").style.right=`0%`
+      document.querySelector(".slidebar").style.transition=` right 1s cubic-bezier(0.075, 0.82, 0.165, 1)`
+      document.querySelector(".slidebar").style.right=`0%`
     })
     document.querySelector("#close").addEventListener("click",()=>{
       document.querySelector(".slidebar").style.transition=`right 8s cubic-bezier(0.075, 0.82, 0.165, 1)`
-        document.querySelector(".slidebar").style.right=`-80%`
+      document.querySelector(".slidebar").style.right=`-80%`
     })
 </script>
