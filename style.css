@@ -97,7 +97,8 @@ body{
     height: 550px;
     border-radius: 20px;
     width: 550px;
-    background-color: #0377c4;
+    border: 1px solid #E5E7EB;
+    box-shadow: 3px 3px 10px #E5E7EB;
 }
 .aboutsec>.text>:nth-child(2){
     height: 300px;
@@ -178,7 +179,7 @@ body{
     height: 400px;
     width: 523px;
     border-radius: 10px;
-    border: 1px solid black;
+    box-shadow: 3px 3px 10px #E5E7EB;
 }
 .projectcard>h2{
     margin-top: 10px;
@@ -226,13 +227,14 @@ body{
 
 
 
+
 .title3{
     margin-top: 50px;
     display: flex;
     width: 100vw;
     margin-bottom: 40px;
     justify-content: center;
-    font-size: 2rem;
+    font-size: 2.3rem;
     font-family: "Instrument Sans", sans-serif;
 }
 .getintouchsection{
@@ -245,7 +247,6 @@ body{
     margin-top: 20px;
     height: 600px;
     width: 1200px;
-    border: 2px solid black;
     display: flex;
     align-items: center;
     gap: 50px;
@@ -254,10 +255,96 @@ body{
     margin-right: 10px;
 height: 599px;
 width: 570px;
-background-color: #3F99D3;
+background-color: #ffffff;
+display: flex;
+flex-direction: column;
+gap: 23px;
 }
+
+.left>h1{
+    font-size: 1.5rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 600;
+}
+.left>p{
+    font-size: 1rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 300;
+}
+
+.svgsec{
+    display: flex;
+    gap: 15px;
+}
+
+.svgsec>div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 40px;
+    background-color: #C9E6FB;
+    color: #0078C3;
+    font-size: 21px;
+    transition: background-color 500ms ease-in;
+    transition: color 500ms ease-in;
+    transition: transform 200ms ease-in;
+}
+.svgsec>div:hover{
+    background-color: #0078C3;
+    transform: translateY(-5px);
+    color: #CAE3F3;
+}
+
+
+
+
+
 .right{
+    box-shadow: 3px 3px 10px #E5E7EB;
     height: 599px;
     width: 570px;
-    background-color: #3F99D3;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   font-size: 0.9rem;
+   font-family: "Instrument Sans", sans-serif;
+   font-weight: 600;
 }
+.right>div:nth-child(1){
+    margin-top: 40px;
+}
+.right>div>input{
+    width: 450px;
+    height: 40px;
+    border: 1px solid #E5E7EB;
+    border-radius: 7px;
+}
+.right>div:nth-child(3)>input{
+    width: 450px;
+    height: 130px;
+    border: 1px solid #E5E7EB;
+    border-radius: 7px;
+}
+
+.right>div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    gap: 10px;
+}
+
+.right>button{
+    border: 0.01px solid #E5E7EB;
+    background-color:#0078C3;
+    color: #ffffff;
+    width: 450px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 41px;
+    font-size: 0.9rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 900;
+}
+
