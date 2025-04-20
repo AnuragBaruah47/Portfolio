@@ -5,17 +5,25 @@
     margin: 0px;
     padding: 0px;
 }
+html{
+    overflow-x: hidden;
+}
 body{
         font-family: "Geist", sans-serif;
         font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
       font-size: 16px;
-      overflow-x: hidden;
 }
 .container{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    width: 99.9%;
+    position: relative;
+}
+.herosec{
+    margin-top: 10px;
+    height: 900px;
+    max-width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -25,16 +33,37 @@ body{
     perspective: 1000px;
 }
 
+.ftext{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 350px;
+}
 
-
-.container>h1{
+.imgc{
+    height: 301px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    max-width: 100%;
+    z-index: -1;
+    top: 510px;
+}
+.ftext>h1{
     font-size: 5rem;
 }
-.container>p{
+.ftext>p{
+    left: 25px;
+    position: relative;
     font-size: 1.5rem;
     font-family: "Instrument Sans", sans-serif;
+    color: #4B5563;
+    font-weight: 500;
 }
-.container>button{
+.herosec>button{
+    bottom: 350px;
+    position: absolute;
     height: 45px;
     width: 170px;
     border-radius: 25px;
@@ -45,20 +74,19 @@ body{
     margin-top: 10px;
     font-family: inherit;
     transition: background-color 500ms ease-in;
-    transition: transform 100ms ease-in;
+    transition: transform 300ms ease-in;
  
 }
 
-.container>button:hover{
+.herosec>button:hover{
     background-color: #0377c4;
     transform: translateZ(50px);
 }
-.container>img{
-    position: absolute;
-    z-index: -1;
-    bottom: 0px;
-    width: 100vw;
+.imgc>img{
+    display: block;
+    width: 100%;
 }
+
 
 
 
@@ -106,7 +134,7 @@ body{
     resize: none;
     border: none;
     outline: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: inherit;
     text-align: start;
     font-family: "Instrument Sans", sans-serif;
@@ -120,7 +148,7 @@ body{
     border-radius: 10px;
 }
 .threecard{
-    top: -70px;
+    top: -40px;
     position: relative;
     display: flex;
     gap: 20px;
@@ -140,6 +168,7 @@ body{
     font-size: 0.9rem;
     font-family: "Instrument Sans", sans-serif;
     font-weight: 100;
+    color: #4B5563;
 }
 
 
@@ -270,6 +299,7 @@ gap: 23px;
     font-size: 1rem;
     font-family: "Instrument Sans", sans-serif;
     font-weight: 300;
+    color: #4B5563;
 }
 
 .svgsec{
@@ -331,7 +361,7 @@ gap: 23px;
 .right>div{
     display: flex;
     flex-direction: column;
-    margin-left: 40px;
+    margin-left: 55px;
     gap: 10px;
 }
 
@@ -342,9 +372,222 @@ gap: 23px;
     width: 450px;
     height: 50px;
     border-radius: 8px;
-    margin-left: 41px;
+    margin-left: 56px;
     font-size: 0.9rem;
     font-family: "Instrument Sans", sans-serif;
     font-weight: 900;
 }
 
+
+
+
+
+
+
+.title4>div:first-child{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+.title4>div:first-child>h1{
+    font-size: 1.5rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 900;
+}
+.title4>div:first-child>p{
+    font-size: 1rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    color: #4B5563;
+}
+footer{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    gap: 20px;
+}
+.linecover{
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.line{
+    display: flex;
+    width: 1200px;
+    background-color: #E5E7EB;
+    height: 0.5px;
+    z-index: 2;
+    border-radius: 2px;
+    position: absolute;
+    bottom: -60px;
+}
+.left1{
+    height: 190px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+}
+.left1>div>ul{
+    display: flex;
+    list-style: none;
+    gap: 30px;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 500;
+    color: #4B5563;
+    font-size: 1rem;
+    
+}
+
+.left1>div>ul>a{
+    text-decoration: none;
+    list-style: none;
+    color: #4B5563;
+}
+.left1>:first-child{
+    display: flex;
+    gap: 5px;
+    flex-direction: column;
+}
+.left1>div>h1{
+    font-size: 1.5rem;
+}
+.left1>div>h2{
+  font-size: 1rem;  
+  font-family: "Instrument Sans", sans-serif;
+  font-weight: 500;
+  color: #4B5563;
+}
+
+.right1{
+    position: relative;
+    height: 190px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    right: -100px;
+}
+
+.footimg{
+    width: 100vw;
+    position: relative;
+    z-index: -1;
+}
+
+@media(width<1261px){
+    .innerbox{
+        margin-top: 20px;
+        height: 600px;
+        width: 1700px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        margin-bottom: 60px;
+    }
+    footer>div{
+        justify-content: center;
+        display: flex;
+        width: 100%;
+        height: 50px;
+        gap: 20px;
+    }
+    .getintouchsection{
+        height: 900px;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+    }
+    
+.right{
+    box-shadow: 3px 3px 10px #E5E7EB;
+    height: 800px;
+    width: 570px;
+   display: flex;
+   flex-direction: column;
+   gap: 30px;
+   font-size: 0.9rem;
+   font-family: "Instrument Sans", sans-serif;
+   font-weight: 600;
+}
+.right>button{
+    border: 0.01px solid #E5E7EB;
+    background-color:#0078C3;
+    color: #ffffff;
+    width: 450px;
+    height: 50px;
+    border-radius: 8px;
+    margin-left: 56px;
+    font-size: 0.9rem;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 900;
+    margin-bottom: 50px;
+}
+.linecover{
+    display: flex;
+    justify-content: center;
+    gap: 0px;
+}
+.left1 {
+    position: relative;
+    height: 190px;
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    left: 70px;
+}
+.right1{
+    position: relative;
+    height: 190px;
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    right: -100px;
+}
+.aboutsec>.text>:nth-child(2){
+    height: 300px;
+    width: 31vw;
+    resize: none;
+    border: none;
+    outline: none;
+    font-size: 1rem;
+    font-family: inherit;
+    text-align: start;
+    font-family: "Instrument Sans", sans-serif;
+    font-weight: 300;
+    line-height: 25px;
+}
+}
+
+@media (width<1188px) {
+    body{
+        overflow-x: none;
+    }
+    .imgc{
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        width: 1000px;
+        z-index: -3;
+        top: 510px;
+    }
+    #baap{
+        width: 1200px;
+    }
+    /* #beta{
+   
+    } */
+    .footimg{
+        width: 100%;
+        position: relative;
+        z-index: -1;
+    }
+}
